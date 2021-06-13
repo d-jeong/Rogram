@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E9B2E2F82675DE7A0008553D /* RogramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E2F72675DE7A0008553D /* RogramApp.swift */; };
-		E9B2E2FA2675DE7A0008553D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E2F92675DE7A0008553D /* ContentView.swift */; };
 		E9B2E2FC2675DE7B0008553D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E2FB2675DE7B0008553D /* Assets.xcassets */; };
 		E9B2E2FF2675DE7B0008553D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E2FE2675DE7B0008553D /* Preview Assets.xcassets */; };
 		E9B2E30A2675DE7B0008553D /* RogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3092675DE7B0008553D /* RogramTests.swift */; platformFilter = ios; };
@@ -20,6 +19,10 @@
 		E9B2E36E2675F3FD0008553D /* PhotosUserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E36D2675F3FD0008553D /* PhotosUserAction.swift */; };
 		E9B2E3722675F7CE0008553D /* PhotosEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3712675F7CE0008553D /* PhotosEnvironment.swift */; };
 		E9B2E3792675FD020008553D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E3782675FD020008553D /* ComposableArchitecture */; };
+		E9B2E3802676061A0008553D /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E37F2676061A0008553D /* PhotosView.swift */; };
+		E9B2E38626760CDA0008553D /* PhotoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E38526760CDA0008553D /* PhotoRowView.swift */; };
+		E9B2E38B26760D950008553D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E38A26760D950008553D /* SDWebImageSwiftUI */; };
+		E9B2E38F267610640008553D /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E38E267610640008553D /* PhotoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,6 @@
 /* Begin PBXFileReference section */
 		E9B2E2F42675DE7A0008553D /* Rogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B2E2F72675DE7A0008553D /* RogramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramApp.swift; sourceTree = "<group>"; };
-		E9B2E2F92675DE7A0008553D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9B2E2FB2675DE7B0008553D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9B2E2FE2675DE7B0008553D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9B2E3002675DE7B0008553D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,9 @@
 		E9B2E3622675F2080008553D /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
 		E9B2E36D2675F3FD0008553D /* PhotosUserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUserAction.swift; sourceTree = "<group>"; };
 		E9B2E3712675F7CE0008553D /* PhotosEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEnvironment.swift; sourceTree = "<group>"; };
+		E9B2E37F2676061A0008553D /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		E9B2E38526760CDA0008553D /* PhotoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRowView.swift; sourceTree = "<group>"; };
+		E9B2E38E267610640008553D /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B2E38B26760D950008553D /* SDWebImageSwiftUI in Frameworks */,
 				E9B2E3792675FD020008553D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +100,6 @@
 				E9B2E3612675F1DF0008553D /* Photos */,
 				E9B2E32F2675E0040008553D /* Service */,
 				E9B2E2F72675DE7A0008553D /* RogramApp.swift */,
-				E9B2E2F92675DE7A0008553D /* ContentView.swift */,
 				E9B2E2FB2675DE7B0008553D /* Assets.xcassets */,
 				E9B2E3002675DE7B0008553D /* Info.plist */,
 				E9B2E2FD2675DE7B0008553D /* Preview Content */,
@@ -141,11 +146,22 @@
 		E9B2E3612675F1DF0008553D /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				E9B2E37E2676060F0008553D /* Views */,
 				E9B2E3622675F2080008553D /* PhotosState.swift */,
 				E9B2E36D2675F3FD0008553D /* PhotosUserAction.swift */,
 				E9B2E3712675F7CE0008553D /* PhotosEnvironment.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		E9B2E37E2676060F0008553D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9B2E37F2676061A0008553D /* PhotosView.swift */,
+				E9B2E38526760CDA0008553D /* PhotoRowView.swift */,
+				E9B2E38E267610640008553D /* PhotoDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +182,7 @@
 			name = Rogram;
 			packageProductDependencies = (
 				E9B2E3782675FD020008553D /* ComposableArchitecture */,
+				E9B2E38A26760D950008553D /* SDWebImageSwiftUI */,
 			);
 			productName = Rogram;
 			productReference = E9B2E2F42675DE7A0008553D /* Rogram.app */;
@@ -218,6 +235,7 @@
 			mainGroup = E9B2E2EB2675DE7A0008553D;
 			packageReferences = (
 				E9B2E3772675FD020008553D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				E9B2E38926760D950008553D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = E9B2E2F52675DE7A0008553D /* Products */;
 			projectDirPath = "";
@@ -253,13 +271,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B2E2FA2675DE7A0008553D /* ContentView.swift in Sources */,
 				E9B2E2F82675DE7A0008553D /* RogramApp.swift in Sources */,
 				E9B2E3632675F2080008553D /* PhotosState.swift in Sources */,
+				E9B2E38626760CDA0008553D /* PhotoRowView.swift in Sources */,
 				E9B2E36E2675F3FD0008553D /* PhotosUserAction.swift in Sources */,
 				E9B2E34B2675E8900008553D /* PhotoService.swift in Sources */,
 				E9B2E3392675E2730008553D /* NetworkService.swift in Sources */,
 				E9B2E3312675E08A0008553D /* NetworkClient.swift in Sources */,
+				E9B2E3802676061A0008553D /* PhotosView.swift in Sources */,
+				E9B2E38F267610640008553D /* PhotoDetailView.swift in Sources */,
 				E9B2E3722675F7CE0008553D /* PhotosEnvironment.swift in Sources */,
 				E9B2E33F2675E8040008553D /* Photo.swift in Sources */,
 			);
@@ -529,6 +549,14 @@
 				minimumVersion = 0.18.0;
 			};
 		};
+		E9B2E38926760D950008553D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -536,6 +564,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9B2E3772675FD020008553D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		E9B2E38A26760D950008553D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9B2E38926760D950008553D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
