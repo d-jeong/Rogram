@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,19 +11,18 @@
 		E9B2E2FA2675DE7A0008553D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E2F92675DE7A0008553D /* ContentView.swift */; };
 		E9B2E2FC2675DE7B0008553D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E2FB2675DE7B0008553D /* Assets.xcassets */; };
 		E9B2E2FF2675DE7B0008553D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E2FE2675DE7B0008553D /* Preview Assets.xcassets */; };
-		E9B2E30A2675DE7B0008553D /* RogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3092675DE7B0008553D /* RogramTests.swift */; };
-		E9B2E3152675DE7B0008553D /* RogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3142675DE7B0008553D /* RogramUITests.swift */; };
+		E9B2E30A2675DE7B0008553D /* RogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3092675DE7B0008553D /* RogramTests.swift */; platformFilter = ios; };
+		E9B2E3312675E08A0008553D /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3302675E08A0008553D /* NetworkClient.swift */; };
+		E9B2E3392675E2730008553D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3382675E2730008553D /* NetworkService.swift */; };
+		E9B2E33F2675E8040008553D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E33E2675E8040008553D /* Photo.swift */; };
+		E9B2E34B2675E8900008553D /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E34A2675E8900008553D /* PhotoService.swift */; };
+		E9B2E35A2675EF810008553D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E3592675EF810008553D /* RxRelay */; };
+		E9B2E35C2675EF810008553D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E35B2675EF810008553D /* RxSwift */; };
+		E9B2E35E2675EF810008553D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E35D2675EF810008553D /* RxCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		E9B2E3062675DE7B0008553D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9B2E2EC2675DE7A0008553D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E9B2E2F32675DE7A0008553D;
-			remoteInfo = Rogram;
-		};
-		E9B2E3112675DE7B0008553D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9B2E2EC2675DE7A0008553D /* Project object */;
 			proxyType = 1;
@@ -42,9 +41,10 @@
 		E9B2E3052675DE7B0008553D /* RogramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RogramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B2E3092675DE7B0008553D /* RogramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramTests.swift; sourceTree = "<group>"; };
 		E9B2E30B2675DE7B0008553D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9B2E3102675DE7B0008553D /* RogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9B2E3142675DE7B0008553D /* RogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramUITests.swift; sourceTree = "<group>"; };
-		E9B2E3162675DE7B0008553D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B2E3302675E08A0008553D /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		E9B2E3382675E2730008553D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E9B2E33E2675E8040008553D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		E9B2E34A2675E8900008553D /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,17 +52,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B2E35E2675EF810008553D /* RxCocoa in Frameworks */,
+				E9B2E35C2675EF810008553D /* RxSwift in Frameworks */,
+				E9B2E35A2675EF810008553D /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E9B2E3022675DE7B0008553D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9B2E30D2675DE7B0008553D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,7 +73,6 @@
 			children = (
 				E9B2E2F62675DE7A0008553D /* Rogram */,
 				E9B2E3082675DE7B0008553D /* RogramTests */,
-				E9B2E3132675DE7B0008553D /* RogramUITests */,
 				E9B2E2F52675DE7A0008553D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +82,6 @@
 			children = (
 				E9B2E2F42675DE7A0008553D /* Rogram.app */,
 				E9B2E3052675DE7B0008553D /* RogramTests.xctest */,
-				E9B2E3102675DE7B0008553D /* RogramUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +89,7 @@
 		E9B2E2F62675DE7A0008553D /* Rogram */ = {
 			isa = PBXGroup;
 			children = (
+				E9B2E32F2675E0040008553D /* Service */,
 				E9B2E2F72675DE7A0008553D /* RogramApp.swift */,
 				E9B2E2F92675DE7A0008553D /* ContentView.swift */,
 				E9B2E2FB2675DE7B0008553D /* Assets.xcassets */,
@@ -121,13 +116,23 @@
 			path = RogramTests;
 			sourceTree = "<group>";
 		};
-		E9B2E3132675DE7B0008553D /* RogramUITests */ = {
+		E9B2E32F2675E0040008553D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				E9B2E3142675DE7B0008553D /* RogramUITests.swift */,
-				E9B2E3162675DE7B0008553D /* Info.plist */,
+				E9B2E33D2675E79E0008553D /* Photo */,
+				E9B2E3302675E08A0008553D /* NetworkClient.swift */,
+				E9B2E3382675E2730008553D /* NetworkService.swift */,
 			);
-			path = RogramUITests;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E9B2E33D2675E79E0008553D /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				E9B2E33E2675E8040008553D /* Photo.swift */,
+				E9B2E34A2675E8900008553D /* PhotoService.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +151,11 @@
 			dependencies = (
 			);
 			name = Rogram;
+			packageProductDependencies = (
+				E9B2E3592675EF810008553D /* RxRelay */,
+				E9B2E35B2675EF810008553D /* RxSwift */,
+				E9B2E35D2675EF810008553D /* RxCocoa */,
+			);
 			productName = Rogram;
 			productReference = E9B2E2F42675DE7A0008553D /* Rogram.app */;
 			productType = "com.apple.product-type.application";
@@ -168,24 +178,6 @@
 			productReference = E9B2E3052675DE7B0008553D /* RogramTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E9B2E30F2675DE7B0008553D /* RogramUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E9B2E31F2675DE7B0008553D /* Build configuration list for PBXNativeTarget "RogramUITests" */;
-			buildPhases = (
-				E9B2E30C2675DE7B0008553D /* Sources */,
-				E9B2E30D2675DE7B0008553D /* Frameworks */,
-				E9B2E30E2675DE7B0008553D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E9B2E3122675DE7B0008553D /* PBXTargetDependency */,
-			);
-			name = RogramUITests;
-			productName = RogramUITests;
-			productReference = E9B2E3102675DE7B0008553D /* RogramUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,10 +194,6 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = E9B2E2F32675DE7A0008553D;
 					};
-					E9B2E30F2675DE7B0008553D = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = E9B2E2F32675DE7A0008553D;
-					};
 				};
 			};
 			buildConfigurationList = E9B2E2EF2675DE7A0008553D /* Build configuration list for PBXProject "Rogram" */;
@@ -217,13 +205,15 @@
 				Base,
 			);
 			mainGroup = E9B2E2EB2675DE7A0008553D;
+			packageReferences = (
+				E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = E9B2E2F52675DE7A0008553D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E9B2E2F32675DE7A0008553D /* Rogram */,
 				E9B2E3042675DE7B0008553D /* RogramTests */,
-				E9B2E30F2675DE7B0008553D /* RogramUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,13 +235,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9B2E30E2675DE7B0008553D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -261,6 +244,10 @@
 			files = (
 				E9B2E2FA2675DE7A0008553D /* ContentView.swift in Sources */,
 				E9B2E2F82675DE7A0008553D /* RogramApp.swift in Sources */,
+				E9B2E34B2675E8900008553D /* PhotoService.swift in Sources */,
+				E9B2E3392675E2730008553D /* NetworkService.swift in Sources */,
+				E9B2E3312675E08A0008553D /* NetworkClient.swift in Sources */,
+				E9B2E33F2675E8040008553D /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +259,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9B2E30C2675DE7B0008553D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9B2E3152675DE7B0008553D /* RogramUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,11 +266,6 @@
 			isa = PBXTargetDependency;
 			target = E9B2E2F32675DE7A0008553D /* Rogram */;
 			targetProxy = E9B2E3062675DE7B0008553D /* PBXContainerItemProxy */;
-		};
-		E9B2E3122675DE7B0008553D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E9B2E2F32675DE7A0008553D /* Rogram */;
-			targetProxy = E9B2E3112675DE7B0008553D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -500,46 +474,6 @@
 			};
 			name = Release;
 		};
-		E9B2E3202675DE7B0008553D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SY7FQD2ZC5;
-				INFOPLIST_FILE = RogramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidjeong.RogramUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Rogram;
-			};
-			name = Debug;
-		};
-		E9B2E3212675DE7B0008553D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SY7FQD2ZC5;
-				INFOPLIST_FILE = RogramUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidjeong.RogramUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Rogram;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -570,16 +504,36 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9B2E31F2675DE7B0008553D /* Build configuration list for PBXNativeTarget "RogramUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E9B2E3202675DE7B0008553D /* Debug */,
-				E9B2E3212675DE7B0008553D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9B2E3592675EF810008553D /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		E9B2E35B2675EF810008553D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		E9B2E35D2675EF810008553D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9B2E2EC2675DE7A0008553D /* Project object */;
 }
