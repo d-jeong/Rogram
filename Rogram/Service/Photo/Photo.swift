@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photo: Decodable, Equatable {
+struct Photo: Decodable, Equatable, Identifiable {
     let id: Int
     let albumId: Int
     let title: String
