@@ -16,9 +16,10 @@
 		E9B2E3392675E2730008553D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3382675E2730008553D /* NetworkService.swift */; };
 		E9B2E33F2675E8040008553D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E33E2675E8040008553D /* Photo.swift */; };
 		E9B2E34B2675E8900008553D /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E34A2675E8900008553D /* PhotoService.swift */; };
-		E9B2E35A2675EF810008553D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E3592675EF810008553D /* RxRelay */; };
-		E9B2E35C2675EF810008553D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E35B2675EF810008553D /* RxSwift */; };
-		E9B2E35E2675EF810008553D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E35D2675EF810008553D /* RxCocoa */; };
+		E9B2E3632675F2080008553D /* PhotosState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3622675F2080008553D /* PhotosState.swift */; };
+		E9B2E36E2675F3FD0008553D /* PhotosUserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E36D2675F3FD0008553D /* PhotosUserAction.swift */; };
+		E9B2E3722675F7CE0008553D /* PhotosEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3712675F7CE0008553D /* PhotosEnvironment.swift */; };
+		E9B2E3792675FD020008553D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E9B2E3782675FD020008553D /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,9 @@
 		E9B2E3382675E2730008553D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E9B2E33E2675E8040008553D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		E9B2E34A2675E8900008553D /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		E9B2E3622675F2080008553D /* PhotosState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosState.swift; sourceTree = "<group>"; };
+		E9B2E36D2675F3FD0008553D /* PhotosUserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUserAction.swift; sourceTree = "<group>"; };
+		E9B2E3712675F7CE0008553D /* PhotosEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B2E35E2675EF810008553D /* RxCocoa in Frameworks */,
-				E9B2E35C2675EF810008553D /* RxSwift in Frameworks */,
-				E9B2E35A2675EF810008553D /* RxRelay in Frameworks */,
+				E9B2E3792675FD020008553D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,7 @@
 		E9B2E2F62675DE7A0008553D /* Rogram */ = {
 			isa = PBXGroup;
 			children = (
+				E9B2E3612675F1DF0008553D /* Photos */,
 				E9B2E32F2675E0040008553D /* Service */,
 				E9B2E2F72675DE7A0008553D /* RogramApp.swift */,
 				E9B2E2F92675DE7A0008553D /* ContentView.swift */,
@@ -135,6 +138,16 @@
 			path = Photo;
 			sourceTree = "<group>";
 		};
+		E9B2E3612675F1DF0008553D /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				E9B2E3622675F2080008553D /* PhotosState.swift */,
+				E9B2E36D2675F3FD0008553D /* PhotosUserAction.swift */,
+				E9B2E3712675F7CE0008553D /* PhotosEnvironment.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +165,7 @@
 			);
 			name = Rogram;
 			packageProductDependencies = (
-				E9B2E3592675EF810008553D /* RxRelay */,
-				E9B2E35B2675EF810008553D /* RxSwift */,
-				E9B2E35D2675EF810008553D /* RxCocoa */,
+				E9B2E3782675FD020008553D /* ComposableArchitecture */,
 			);
 			productName = Rogram;
 			productReference = E9B2E2F42675DE7A0008553D /* Rogram.app */;
@@ -206,7 +217,7 @@
 			);
 			mainGroup = E9B2E2EB2675DE7A0008553D;
 			packageReferences = (
-				E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E9B2E3772675FD020008553D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = E9B2E2F52675DE7A0008553D /* Products */;
 			projectDirPath = "";
@@ -244,9 +255,12 @@
 			files = (
 				E9B2E2FA2675DE7A0008553D /* ContentView.swift in Sources */,
 				E9B2E2F82675DE7A0008553D /* RogramApp.swift in Sources */,
+				E9B2E3632675F2080008553D /* PhotosState.swift in Sources */,
+				E9B2E36E2675F3FD0008553D /* PhotosUserAction.swift in Sources */,
 				E9B2E34B2675E8900008553D /* PhotoService.swift in Sources */,
 				E9B2E3392675E2730008553D /* NetworkService.swift in Sources */,
 				E9B2E3312675E08A0008553D /* NetworkClient.swift in Sources */,
+				E9B2E3722675F7CE0008553D /* PhotosEnvironment.swift in Sources */,
 				E9B2E33F2675E8040008553D /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,31 +521,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		E9B2E3772675FD020008553D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 6.2.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.18.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E9B2E3592675EF810008553D /* RxRelay */ = {
+		E9B2E3782675FD020008553D /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		E9B2E35B2675EF810008553D /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		E9B2E35D2675EF810008553D /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E9B2E3582675EF810008553D /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
+			package = E9B2E3772675FD020008553D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

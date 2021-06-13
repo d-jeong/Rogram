@@ -5,13 +5,14 @@
 //  Created by David Jeong on 6/13/21.
 //
 
+import Combine
 import Foundation
-import RxCocoa
-import RxSwift
 
 class NetworkClient {
 
-    static func get(request: URLRequest) -> Observable<Data> {
-        URLSession.shared.rx.data(request: request)
+    static func get(request: URLRequest) -> AnyPublisher<Data, URLError> {
+        URLSession.shared.dataTaskPublisher(for: request)
+            .map(\.data)
+            .eraseToAnyPublisher()
     }
 }

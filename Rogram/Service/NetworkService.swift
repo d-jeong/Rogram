@@ -5,8 +5,8 @@
 //  Created by David Jeong on 6/13/21.
 //
 
+import Combine
 import Foundation
-import RxSwift
 
 protocol NetworkService {
     associatedtype Model: Decodable
@@ -21,11 +21,11 @@ enum NetworkError: Error {
 
 extension NetworkService {
 
-    func list() -> Single<[Model]> {
+    func list() -> AnyPublisher<[Model], Error>{
         list(url: baseURL)
     }
 
-    func list(url: String) -> Single<[Model]> {
+    func list(url: String) -> AnyPublisher<[Model], Error> {
         fetch(url: url)
     }
 }
@@ -34,15 +34,15 @@ extension NetworkService {
 
 extension NetworkService {
 
-    private func fetch<T: Decodable>(url: URL) -> Single<T> {
+    private func fetch<T: Decodable>(url: URL) -> AnyPublisher<T, Error> {
         NetworkClient.get(request: URLRequest(url: url))
-            .map { try JSONDecoder().decode(T.self, from: $0) }
-            .asSingle()
+            .decode(type: T.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 
-    private func fetch<T: Decodable>(url: String) -> Single<T> {
+    private func fetch<T: Decodable>(url: String) -> AnyPublisher<T, Error> {
         guard let url = URL(string: url) else {
-            return .error(NetworkError.invalidURL)
+            return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
         }
 
         return fetch(url: url)
