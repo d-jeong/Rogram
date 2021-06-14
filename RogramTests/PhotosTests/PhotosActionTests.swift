@@ -46,11 +46,7 @@ class PhotosActionTests: XCTestCase {
     }
 
     func testSuccessfulLoadPhotos() {
-        mockPhotoService.mockList = {
-            Just(Photo.mockList)
-                .setFailureType(to: Error.self)
-                .eraseToAnyPublisher()
-        }
+        mockPhotoService.mockList = Photo.mockList
 
         testStore.assert(
             .send(.loadPhotos) {
@@ -67,11 +63,6 @@ class PhotosActionTests: XCTestCase {
     }
 
     func testFailedLoadPhotos() {
-        mockPhotoService.mockList = {
-            Fail(error: NetworkError.invalidURL)
-                .eraseToAnyPublisher()
-        }
-
         testStore.assert(
             .send(.loadPhotos) {
                 $0.isLoading = true

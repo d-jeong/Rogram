@@ -8,11 +8,13 @@
 import Combine
 
 class MockPhotoService: PhotoServiceProvidable {
-    var mockList: () -> AnyPublisher<[Photo], Error> = {
-        Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
-    }
+    var mockList: [Photo]?
 
     func list() -> AnyPublisher<[Photo], Error> {
-        mockList()
+        guard let mockList = mockList else {
+            return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
+        }
+
+        return Just(mockList).setFailureType(to: Error.self).eraseToAnyPublisher()
     }
 }
