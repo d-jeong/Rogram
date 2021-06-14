@@ -26,6 +26,7 @@
 		E9B2E3A12676153D0008553D /* PhotoService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3A02676153D0008553D /* PhotoService+Mock.swift */; };
 		E9B2E3A52676165A0008553D /* Photo+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3A42676165A0008553D /* Photo+Mock.swift */; };
 		E9B2E3AB2676182B0008553D /* PhotosActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E3AA2676182B0008553D /* PhotosActionTests.swift */; };
+		E9B2E3B82677193A0008553D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E3B72677193A0008553D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E9B2E3A02676153D0008553D /* PhotoService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoService+Mock.swift"; sourceTree = "<group>"; };
 		E9B2E3A42676165A0008553D /* Photo+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Mock.swift"; sourceTree = "<group>"; };
 		E9B2E3AA2676182B0008553D /* PhotosActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosActionTests.swift; sourceTree = "<group>"; };
+		E9B2E3B72677193A0008553D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		E9B2E2EB2675DE7A0008553D = {
 			isa = PBXGroup;
 			children = (
+				E9B2E3B72677193A0008553D /* README.md */,
 				E9B2E2F62675DE7A0008553D /* Rogram */,
 				E9B2E3082675DE7B0008553D /* RogramTests */,
 				E9B2E2F52675DE7A0008553D /* Products */,
@@ -277,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B2E3B82677193A0008553D /* README.md in Resources */,
 				E9B2E2FF2675DE7B0008553D /* Preview Assets.xcassets in Resources */,
 				E9B2E2FC2675DE7B0008553D /* Assets.xcassets in Resources */,
 			);
