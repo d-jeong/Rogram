@@ -15,6 +15,16 @@ struct PhotosView: View {
 
     var body: some View {
         WithViewStore(store) { store in
+            if store.photos.isEmpty {
+                emptyView
+            } else {
+                listView
+            }
+        }
+    }
+
+    var listView: some View {
+        WithViewStore(store) { store in
             List(store.photos, id: \.id) { photo in
                 PhotoRowView(photo: photo)
                     .onTapGesture {
@@ -25,8 +35,23 @@ struct PhotosView: View {
                 item: store.binding(get: { $0.presentedPhoto }, send: .dismissModal),
                 content: { PhotoDetailView(photo: $0) }
             )
-            .onAppear {
-                store.send(.loadPhotos)
+        }
+    }
+
+    var emptyView: some View {
+        WithViewStore(store) { store in
+            VStack(spacing: 16) {
+                Text("No results found 🥶")
+                    .font(.system(size: 26))
+
+                if store.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                } else {
+                    Button("Load Photos") {
+                        store.send(.loadPhotos)
+                    }
+                }
             }
         }
     }
