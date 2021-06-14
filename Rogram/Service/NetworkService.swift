@@ -20,7 +20,6 @@ enum NetworkError: Error {
 // MARK: - List
 
 extension NetworkService {
-
     func list() -> AnyPublisher<[Model], Error> {
         list(url: baseURL)
     }
@@ -33,7 +32,6 @@ extension NetworkService {
 // MARK: - Private Helpers
 
 extension NetworkService {
-
     private func fetch<T: Decodable>(url: URL) -> AnyPublisher<T, Error> {
         NetworkClient.get(request: URLRequest(url: url))
             .decode(type: T.self, decoder: JSONDecoder())

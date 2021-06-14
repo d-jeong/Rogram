@@ -9,11 +9,9 @@ import SDWebImageSwiftUI
 import SwiftUI
 
 struct PhotoDetailView: View {
-
     let photo: Photo
 
     var body: some View {
-
         VStack {
             WebImage(url: URL(string: photo.url))
                 .resizable()

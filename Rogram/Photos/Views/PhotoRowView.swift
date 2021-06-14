@@ -9,11 +9,9 @@ import SDWebImageSwiftUI
 import SwiftUI
 
 struct PhotoRowView: View {
-
     let photo: Photo
 
     var body: some View {
-
         VStack {
             WebImage(url: URL(string: photo.thumbnailUrl))
                 .frame(width: 150, height: 150, alignment: .center)

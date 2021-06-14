@@ -8,7 +8,6 @@
 import Combine
 
 class MockPhotoService: PhotoServiceProvidable {
-
     var mockList: () -> AnyPublisher<[Photo], Error> = {
         Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
     }

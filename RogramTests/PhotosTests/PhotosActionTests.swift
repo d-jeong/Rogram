@@ -11,7 +11,6 @@ import ComposableArchitecture
 import XCTest
 
 class PhotosActionTests: XCTestCase {
-
     private var mockPhotoService = MockPhotoService()
     private var state = PhotosState()
     private lazy var testStore = TestStore(initialState: state,

@@ -9,7 +9,6 @@
 import XCTest
 
 class PhotosStateTests: XCTestCase {
-
     func testInitialState() {
         let state = PhotosState()
         XCTAssertTrue(state.photos.isEmpty)
