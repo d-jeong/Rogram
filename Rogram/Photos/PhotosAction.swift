@@ -1,5 +1,5 @@
 //
-//  PhotosUserAction.swift
+//  PhotosAction.swift
 //  Rogram
 //
 //  Created by David Jeong on 6/13/21.
@@ -39,7 +39,27 @@ extension PhotosAction {
 
         case .didLoadPhotos(.failure):
             state.isLoading = false
+            state.photos = []
             return .none
+        }
+    }
+}
+
+extension PhotosAction: Equatable {
+    static func == (lhs: PhotosAction, rhs: PhotosAction) -> Bool {
+        switch (lhs, rhs) {
+        case (.selectPhoto(let lhsPhoto), .selectPhoto(let rhsPhoto)):
+            return lhsPhoto == rhsPhoto
+        case (.dismissModal, .dismissModal):
+            return true
+        case (.loadPhotos, .loadPhotos):
+            return true
+        case (.didLoadPhotos(.success(let lhsPhotos)), .didLoadPhotos(.success(let rhsPhotos))):
+            return lhsPhotos == rhsPhotos
+        case (.didLoadPhotos(.failure), .didLoadPhotos(.failure)):
+            return true
+        default:
+            return false
         }
     }
 }

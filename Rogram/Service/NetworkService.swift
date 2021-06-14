@@ -21,7 +21,7 @@ enum NetworkError: Error {
 
 extension NetworkService {
 
-    func list() -> AnyPublisher<[Model], Error>{
+    func list() -> AnyPublisher<[Model], Error> {
         list(url: baseURL)
     }
 

@@ -6,5 +6,10 @@
 //
 
 struct PhotosEnvironment {
-    let service = PhotoService()
+
+    let service: PhotoServiceProvidable
+
+    init(service: PhotoServiceProvidable = PhotoService()) {
+        self.service = service
+    }
 }
