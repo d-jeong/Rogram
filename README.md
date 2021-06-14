@@ -2,6 +2,8 @@
 
 ## Description
 Groundbreaking, state of the art telehealth social media app. Coming in 2022.
+Built in SwiftUI, Combine, and Composable Architecture.
+Dependencies managed by Swift Package Manager.
 
 ## Base Networking
 
